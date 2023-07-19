@@ -9,8 +9,8 @@
      char ch ='a' ;
      while (ch <='z')
      {
-     _putchar(ch);
+     _putchar('%s'ch);
       ch++ ;
      }     
-     _putchar ("\n");
+     _putchar ('\n');
  }
