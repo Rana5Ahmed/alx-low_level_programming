@@ -5,12 +5,10 @@
  void print_alphabet (void)
 { 
     char ch ='a' ;
+
     while (ch <='z')
- {
-       _putchar('%s',ch);
+ {      _putchar('%s',ch);
         ch++ ;
  }     
     _putchar ('\n');
-    return (0);
 }
-
