@@ -7,7 +7,7 @@
     char ch ='a' ;
     while (ch <='z')
  {
-       _putchar('%s'ch);
+       _putchar('%s',ch);
         ch++ ;
  }     
     _putchar ('\n');
