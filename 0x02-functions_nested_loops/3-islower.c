@@ -1,8 +1,8 @@
 #include "main.h"
 /**
-* _islower function 
+* _islower function that returns 1 incase lower case , 0 otherwise 
 */
-int _islower(int c)
+int _islower (int c)
 {
 if ('a' <= c && c <= 'z')
 return(1);
