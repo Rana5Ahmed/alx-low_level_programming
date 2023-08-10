@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "main.h"
 /**
 * *malloc_checked- allocate memory with malloc and exit if allocation failed
