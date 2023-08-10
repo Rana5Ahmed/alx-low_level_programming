@@ -2,14 +2,14 @@
 /**
 * *malloc_checked- allocate memory with malloc and exit if allocation failed  
 * @b : int 
-*return :Pointer to array m 
+*return :Pointer to array M
 */
 void *malloc_checked(unsigned int b)
 {
 int *M = malloc(b);
-if (m == NULL)
+if (M == NULL)
 {
     exit(98);
 }
-return (m);
+return (M);
 }
