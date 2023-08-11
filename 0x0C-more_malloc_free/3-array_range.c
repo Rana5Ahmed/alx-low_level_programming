@@ -1,11 +1,11 @@
 #include <stdlib.h>
 #include "main.h"
 /**
-* *array_range - store values started from min to max where min , max included
-* @min: Start number
-* @max:End number
+* *array_range - creates an array of integers
+* @min: minimum range of values stored
+* @max: maximum range of values stored and number of elements
 *
-* Return: Array of int
+* Return: pointer to the new array
 */
 int *array_range(int min, int max)
 {
