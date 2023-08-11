@@ -1,12 +1,12 @@
 #include <stdlib.h>
 #include "main.h"
 /**
-* *string_nconcat - concat two strings
-* @s1: pointer to first string
-* @s2: pointer to second string
-* @n:number of bytes from s2
+* *string_nconcat - concatenates n bytes of a string to another string
+* @s1: string to append to
+* @s2: string to concatenate from
+* @n: number of bytes from s2 to concatenate to s1
 *
-* Return: a pointer shall point to a newly allocated space in memory, which contains s1, followed by the first n bytes of s2, and null terminated
+* Return: pointer to the resulting string
 */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
@@ -17,9 +17,9 @@ lens1++;
 while (s2 && s2[lens2])
 lens2++;
 if (n < lens2)
-ptr = malloc(sizeof(char) * (lens1 + n + 1));
+s = malloc(sizeof(char) * (lens1 + n + 1));
 else
-ptr = malloc(sizeof(char) * (lens1 + lens2 + 1));
+s = malloc(sizeof(char) * (lens1 + lens2 + 1));
 if (ptr == NULL)
 return (NULL);
 while (i < lens1)
