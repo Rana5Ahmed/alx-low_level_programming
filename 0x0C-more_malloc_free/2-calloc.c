@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "main.h"
 /**
 * *_fill - fills memory with a constant byte in our case ZEROS 
