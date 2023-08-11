@@ -23,7 +23,7 @@ while (s2[len_s2] != '\0')
 len_s2++;
 if (n >= len_s2)
 n = len_s2;
-result = malloc((len_s1 + n + 1) * sizeof(char));
+result = malloc(len_s1 + n + 1);
 if (result == NULL)
 return NULL;
 for (i = 0; i < len_s1; i++)
