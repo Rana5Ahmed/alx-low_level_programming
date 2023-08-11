@@ -12,13 +12,13 @@ int *array_range(int min, int max)
 void *ptr;
 unsigned int i;
 unsigned int length;
-length = max - min + 1;
-if(min > max)
+if (min > max)
 return(NULL);
+length = max - min + 1;
 ptr = malloc(sizeof(int) * length);
 if (ptr == NULL)
 return(NULL);
-for (i = min; i < length; i++)
+for (i = 0; i < length; i++)
 ptr[i] = min++;
 return(ptr);
 }
