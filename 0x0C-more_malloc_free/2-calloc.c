@@ -34,3 +34,4 @@ if (ptr == NULL)
 return (NULL);
 _fill (ptr, 0, nmemb*size);
 return (ptr);
+}
