@@ -8,7 +8,7 @@
 *
 * Return: pointer to the memory area M
 */
-char *_fill(char *M, char b,unsigned int n )
+char *_fill(char *M, char b, unsigned int n )
 {
 unsigned int i;
 for (i = 0; i < n; i++)
@@ -26,7 +26,7 @@ return (M);
 */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-void*ptr;
+void *ptr;
 if (nmemb == 0 || size == 0)
 return (NULL);
 ptr = malloc(nmemb * size);
