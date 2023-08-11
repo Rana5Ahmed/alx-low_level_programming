@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include "main.h"
 /**
-* *_fill - fills memory with a constant byte in our case ZEROS 
+* *_fill - fills memory with a constant byte in our case ZEROS
 * @M: memory area to be filled
 * @b: wanted value
 * @n: number of times to put b
@@ -28,10 +28,9 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 {
 void*ptr;
 if (nmemb == 0 || size == 0)
-return (NULL); 
+return (NULL);
 ptr = malloc(nmemb*size);
 if (ptr == NULL)
 return (NULL);
 _fill (ptr, 0, nmemb*size);
 return (ptr);
-}
