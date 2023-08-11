@@ -1,4 +1,3 @@
-#include <stdlib.h>
 #include "main.h"
 /**
 * *_fill - fills memory with a constant byte in our case ZEROS 
@@ -30,6 +29,6 @@ return(NULL);
 ptr = malloc(nmemb*sizeof(int)) ;
 if (ptr == NULL)
 return(NULL);
-_fill(ptr, 0,nmemb*sizeof(int));
+_fill(ptr, 0, nmemb*sizeof(int));
 return(ptr);
 }
