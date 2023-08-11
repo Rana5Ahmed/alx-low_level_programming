@@ -27,10 +27,10 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 {
 void*ptr;
 if (nmemb == 0 || size == 0)
-return(NULL); 
-ptr = malloc(nmemb*sizeof(int)) ;
+return (NULL); 
+ptr = malloc(nmemb*size);
 if (ptr == NULL)
-return(NULL);
-_fill(ptr, 0,nmemb*sizeof(int));
-return(ptr);
+return (NULL);
+_fill (ptr, 0, nmemb*size);
+return (ptr);
 }
