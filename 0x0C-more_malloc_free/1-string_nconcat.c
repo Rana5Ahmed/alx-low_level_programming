@@ -10,26 +10,27 @@
 */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-unsigned int len_s1 = 0, len_s2 = 0;
-char *result = NULL;
-unsigned int i, j;
-if (s1 == NULL)
-s1 = "";
-if (s2 == NULL)
-s2 = "";
-while (s1[len_s1] != '\0')
-len_s1++;
-while (s2[len_s2] != '\0')
-len_s2++;
-if (n >= len_s2)
-n = len_s2;
-result = malloc(len_s1 + n + 1);
-if (result == NULL)
-return NULL;
-for (i = 0; i < len_s1; i++)
-result[i] = s1[i];
-for (j = 0; j < n; j++)
-result[i++] = s2[j];
-result[i] = '\0';
-return result;
+char *ptr;
+unsigned int i = 0, j = 0, lens1 = 0, lens2 = 0;
+while (s1 && s1[lens1])
+lens1++;
+while (s2 && s2[lens2])
+len2++;
+if (n < lens2)
+s = malloc(sizeof(char) * (lens1 + n + 1));
+else
+s = malloc(sizeof(char) * (len1 + lens2 + 1));
+if (ptr == NULL)
+return (NULL);
+while (i < lens1)
+{
+ptr[i] = s1[i];
+i++;
+}
+while (n < lens2 && i < (lens1 + n))
+ptr[i++] = s2[j++];
+while (n >= len2 && i < (lens1 + lens2))
+ptr[i++] = s2[j++];
+ptr[i] = '\0';
+return (ptr);
 }
