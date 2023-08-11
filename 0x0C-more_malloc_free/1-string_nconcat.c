@@ -17,9 +17,9 @@ lens1++;
 while (s2 && s2[lens2])
 lens2++;
 if (n < lens2)
-s = malloc(sizeof(char) * (lens1 + n + 1));
+ptr = malloc(sizeof(char) * (lens1 + n + 1));
 else
-s = malloc(sizeof(char) * (lens1 + lens2 + 1));
+ptr = malloc(sizeof(char) * (lens1 + lens2 + 1));
 if (ptr == NULL)
 return (NULL);
 while (i < lens1)
