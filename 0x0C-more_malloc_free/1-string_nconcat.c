@@ -15,11 +15,11 @@ unsigned int i = 0, j = 0, lens1 = 0, lens2 = 0;
 while (s1 && s1[lens1])
 lens1++;
 while (s2 && s2[lens2])
-len2++;
+lens2++;
 if (n < lens2)
 s = malloc(sizeof(char) * (lens1 + n + 1));
 else
-s = malloc(sizeof(char) * (len1 + lens2 + 1));
+s = malloc(sizeof(char) * (lens1 + lens2 + 1));
 if (ptr == NULL)
 return (NULL);
 while (i < lens1)
@@ -29,7 +29,7 @@ i++;
 }
 while (n < lens2 && i < (lens1 + n))
 ptr[i++] = s2[j++];
-while (n >= len2 && i < (lens1 + lens2))
+while (n >= lens2 && i < (lens1 + lens2))
 ptr[i++] = s2[j++];
 ptr[i] = '\0';
 return (ptr);
