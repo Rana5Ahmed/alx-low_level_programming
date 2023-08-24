@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include "lists.h"
@@ -9,25 +8,19 @@
 *
 * Return: size of list
 */
-list_t *add_node(list_t **head, const char *str)
+size_t print_list(const list_t *h)
 {
-    if (str == NULL)
-        return NULL;
+    size_t count = 0;
 
-    list_t *new = malloc(sizeof(list_t));
-    if (new == NULL)
-        return NULL;
-
-    new->str = strdup(str);
-    if (new->str == NULL)
+    for (; h != NULL; h = h->next)
     {
-        free(new);
-        return NULL;
+        if (h->str == NULL)
+            printf("[0] (nil)\n");
+        else
+            printf("[%u] %s\n", h->len, h->str);
+
+        count++;
     }
 
-    new->len = strlen(str);
-    new->next = *head;
-    *head = new;
-
-    return *head;
+    return count;
 }
