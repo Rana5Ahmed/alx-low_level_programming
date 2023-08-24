@@ -12,9 +12,9 @@ return;
 node = head;
 while (node)
 {
-next_node = node->next;    
-free(node->str);
-free(node);
+next_node = node->next;
+free (node->str);
+free (node);
 node = next_node;
 }
 }
