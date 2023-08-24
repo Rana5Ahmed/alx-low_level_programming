@@ -8,16 +8,18 @@
 *
 * Return: size of list
 */
-size_t print_list(const list_t *h)
+list_t *add_node(list_t **head, const char *str)
 {
-size_t count = 0;
-for (; h != NULL; h = h->next)
-{
-if (h->str == NULL)
-printf("[0] (nil)\n");
-else
-printf("[%u] %s\n", h->len, h->str);
-count++;
-}
-return count;
+list_t *new;
+unsigned int len = 0;
+while (str[len])
+len++;
+new = malloc(sizeof(list_t));
+if (!new)
+return (NULL);
+new->str = strdup(str);
+new->len = len;
+new->next = (*head);
+(*head) = new;
+return (*head);
 }
