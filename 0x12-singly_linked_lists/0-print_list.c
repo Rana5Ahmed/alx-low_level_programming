@@ -17,5 +17,5 @@ else
 printf("[%u] %s\n", h->len, h->str);
 count++;
 }
-return count;
+return(count);
 }
