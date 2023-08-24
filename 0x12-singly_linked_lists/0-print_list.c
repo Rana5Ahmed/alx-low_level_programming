@@ -17,7 +17,7 @@ return (i);
 /**
 * print_list prints a linked lists
 * @h: pointer to first node
-* Return: size of list
+* Return: the number of nodes printed
 */
 size_t print_list(const list_t *h)
 {
